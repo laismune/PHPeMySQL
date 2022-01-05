@@ -1,7 +1,8 @@
 <?php
     require 'config.php';
-    include 'artigo.php';
-    $artigo = new Artigo();
+
+    include 'src/artigo.php';
+    $artigo = new artigo($mysql);
     $artigos = $artigo -> exibirTodos();
 ?>
 
@@ -20,7 +21,7 @@
 
         <?php foreach ($artigos as $artigo) { ?>
             <h2>
-                <a href="<?php echo $artigo['link']; ?>">
+                <a href="artigo.php">
                     <?php echo $artigo['titulo']; ?>
                 </a>
             </h2>
