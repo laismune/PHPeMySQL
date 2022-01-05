@@ -3,7 +3,12 @@ $artigo1 =
 ['titulo' => 'Primeiro passos com Spring',
  'conteudo' => 'Na empresa onde trabalho começamos um Coding Dojo, que é basicamente uma reunião com programadores e
  programadoras a fim de resolver desafios e aperfeiçoar as habilidades com algoritmos.',
- 'link' => 'primeiros-passos-com-spring.html']
+ 'link' => 'primeiros-passos-com-spring.html'];
+
+ $artigo2 = 
+['titulo' => 'O que é Metodologia Ágil?',
+ 'conteudo' => 'Uma vez fui contratada por uma empresa que desenvolvia softwares e aplicativos para outras empresas.',
+ 'link' => 'o-que-e-metodologia-agil.html']
 ?>
 
 <!DOCTYPE html>
@@ -27,16 +32,16 @@ $artigo1 =
             <?php echo $artigo1['conteudo'] ?>
         </p>
         <h2>
-            <a href="o-que-e-metodologia-agil.html">
-                O que é Metodologia Ágil?
+            <a href="<?php echo $artigo2['link'] ?>">
+                <?php echo $artigo2['titulo'] ?>
             </a>
         </h2>
         <p>
-            Uma vez fui contratada por uma empresa que desenvolvia softwares e aplicativos para outras empresas.
+            <?php echo $artigo2['conteudo'] ?>
         </p>
         <h2>
             <a href="como-e-o-funil-do-growth-hacking.html">
-                Como é o funil do Growth Hacking?
+                Como é o funil do Growth Hackig?
             </a>
         </h2>
         <p>
