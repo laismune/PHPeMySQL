@@ -10,7 +10,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Meu Blog</title>
+    <title>Meu Blogg</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -21,7 +21,7 @@
 
         <?php foreach ($artigos as $artigo) { ?>
             <h2>
-                <a href="artigo.php">
+                <a href="artigo.php?id=<?php echo $artigo['id']; ?>">
                     <?php echo $artigo['titulo']; ?>
                 </a>
             </h2>

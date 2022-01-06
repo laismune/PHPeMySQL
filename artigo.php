@@ -1,3 +1,12 @@
+<?php 
+  require 'config.php';
+  require 'src/artigo.php';
+
+  $obj_artigo = new artigo($mysql);
+  $artigo = $obj_artigo->encontrarPorId($_GET['id']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,12 +18,15 @@
 
 <body>
     <div id="container">
-        <h1>Título do Artigo</h1>
-
-            <p>
-                Conteúdo do Artigo
-            </p>
-
+        <h1>
+          <?php echo $artigo['titulo']; ?>
+        </h1>
+        <p>
+          <?php echo $artigo['conteudo']; ?>
+        </p>
+    </div>
+    <div>
+      <a class="botao botao-block" href="index.php"> Voltar </a>
     </div>
 </body>
 
