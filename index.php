@@ -1,7 +1,7 @@
 <?php
     require 'config.php';
-
     include 'src/artigo.php';
+    
     $artigo = new artigo($mysql);
     $artigos = $artigo -> exibirTodos();
 ?>
